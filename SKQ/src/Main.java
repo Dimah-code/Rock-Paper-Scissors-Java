@@ -4,6 +4,7 @@ public class Main {
             System.out.println("******** Rock Paper Scissors ********");
             Machine machine = new Machine();
             machine.decideMenu();
+            machine.Play();
         }
     }
 }

@@ -9,13 +9,15 @@ public class Machine {
         System.out.println("1. Rock");
         System.out.println("2. Paper");
         System.out.println("3. Scissors");
+        System.out.println("0. Exit");
         getDecide();
     }
     private void getDecide(){
         System.out.println("Make your decide");
         decideNumber = scanner.nextInt();
     }
-    public void soowitch(int ){
+    public void Play(){
+        randomMaker();
         if(decideNumber == random){
             System.out.println("Mosavi");
         } else if (decideNumber < random) {
@@ -25,8 +27,8 @@ public class Machine {
             System.out.println("You Won");
         }
     }
-    private int randomMaker(){
+    private void randomMaker(){
         Random rand = new Random();
-        return rand.nextInt(1,4);
+        random =  rand.nextInt(1,4);
     }
 }
