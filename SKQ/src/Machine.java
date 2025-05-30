@@ -18,17 +18,28 @@ public class Machine {
     }
     public void Play(){
         randomMaker();
+        System.out.println("You picked " + dictionary(decideNumber));
+        System.out.println("Machine picked " + dictionary(random));
         if(decideNumber == random){
             System.out.println("Mosavi");
         } else if (decideNumber < random) {
             System.out.println("Machine Won");
         }
-        else{
+        else if(decideNumber > random){
             System.out.println("You Won");
         }
     }
     private void randomMaker(){
         Random rand = new Random();
         random =  rand.nextInt(1,4);
+    }
+    private String dictionary(int number){
+        String dict = switch (number) {
+            case 1 -> "Rock";
+            case 2 -> "Paper";
+            case 3 -> "Scissors";
+            default -> "Invalid";
+        };
+        return dict;
     }
 }
