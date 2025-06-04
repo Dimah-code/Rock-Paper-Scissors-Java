@@ -1,10 +1,12 @@
 public class Main {
+
     public static void main(String[] args) {
-        while(true){
+        Machine machine = new Machine();
+        System.out.println("******** Rock Paper Scissors ********");
+        machine.menuBar();
+        for (int i = 0; i < machine.getGameMode(); i++){
             try{
-                System.out.println("******** Rock Paper Scissors ********");
-                Machine machine = new Machine();
-                machine.decideMenu();
+                machine.getDecide();
                 machine.Play();
                 try{
                     Thread.sleep(2500);
